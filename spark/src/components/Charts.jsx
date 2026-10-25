@@ -21,8 +21,8 @@ export function Bars({ data, empty = 'Sin datos todavía' }) {
   )
 }
 
-// Columnas en el tiempo con tooltip al pasar el cursor: [{ label, value }]
-export function Columns({ data, unit = '' }) {
+// Columnas en el tiempo con tooltip al pasar el cursor: [{ label, value }]; `axis` = textos de los extremos
+export function Columns({ data, unit = '', axis = [data[0]?.label, data.at(-1)?.label] }) {
   const max = Math.max(1, ...data.map((d) => d.value))
   return (
     <div>
@@ -37,7 +37,7 @@ export function Columns({ data, unit = '' }) {
         ))}
       </div>
       <div className="flex justify-between text-[10px] text-slate-400 font-mono mt-1">
-        <span>{data[0]?.label}</span><span>{data.at(-1)?.label}</span>
+        <span>{axis[0]}</span><span>{axis[1]}</span>
       </div>
     </div>
   )

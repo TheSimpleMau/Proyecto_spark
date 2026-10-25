@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { pickReply } from '../data/interests.js'
 import { BOT_BY_ID } from '../lib/simulation.js'
 import { matchView } from './useMatches.js'
@@ -8,8 +8,22 @@ const wait = (min, max) => min + Math.random() * (max - min)
 // Hace que los usuarios simulados acepten, saluden y contesten en mis matches con ellos.
 export function useBotBrain(meId, { matches, messages, respond, sendMessage }) {
   const done = useRef(new Set())
+  const [leader, setLeader] = useState(!navigator.locks)
+
+  // Con varias pestañas abiertas del mismo usuario, solo la que tiene el candado mueve a los bots
+  // (si no, cada pestaña mandaría su propio saludo y respuesta).
+  useEffect(() => {
+    if (!navigator.locks) return
+    const ctrl = new AbortController()
+    navigator.locks.request('spark-bot-brain', { signal: ctrl.signal }, () => {
+      setLeader(true)
+      return new Promise(() => {}) // se libera al cerrar la pestaña
+    }).catch(() => {})
+    return () => ctrl.abort()
+  }, [])
 
   useEffect(() => {
+    if (!leader) return
     const once = (key, ms, fn) => {
       if (done.current.has(key)) return
       done.current.add(key)
@@ -30,5 +44,5 @@ export function useBotBrain(meId, { matches, messages, respond, sendMessage }) {
         once(`re-${last.id}`, wait(2000, 4000), () => sendMessage(m.id, pickReply(m.shared), bot.id))
       }
     }
-  }, [matches, messages, meId, respond, sendMessage])
+  }, [leader, matches, messages, meId, respond, sendMessage])
 }

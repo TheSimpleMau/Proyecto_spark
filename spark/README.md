@@ -62,6 +62,15 @@ simulación global y un panel de métricas.
 4. Se abre el chat en tiempo real. Si comparten Helados/Postres, aparece la push de Dairy Queen.
 5. Para mostrar escala: abran `/simulacion` (velocidad ×20) y `/metricas` en la compu.
 
+## Borrar datos de prueba antes de presentar
+
+En Supabase → SQL Editor (borra a todos los usuarios reales con sus matches y mensajes; los 50 bots se quedan):
+
+```sql
+delete from public.profiles where not is_bot;
+delete from auth.users where is_anonymous;
+```
+
 ## Estructura
 
 ```

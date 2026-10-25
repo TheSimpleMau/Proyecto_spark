@@ -52,7 +52,7 @@ export default function Simulacion() {
         <Link to="/metricas" className="text-xs font-medium text-orange-600 whitespace-nowrap">Métricas →</Link>
       </header>
 
-      <div className="max-w-6xl mx-auto p-4 grid gap-4 lg:grid-cols-[minmax(0,1fr)_340px]">
+      <div className="max-w-6xl mx-auto p-4 grid grid-cols-[minmax(0,1fr)] gap-4 lg:grid-cols-[minmax(0,1fr)_340px]">
         <section className="bg-white rounded-3xl border border-slate-200 p-3 sm:p-4">
           <div className="flex flex-wrap items-center gap-2 mb-3">
             <button onClick={() => setRunning(!running)} className="px-3 py-1.5 rounded-xl bg-slate-900 text-white text-xs font-medium">
@@ -63,7 +63,7 @@ export default function Simulacion() {
                 <button key={s} onClick={() => setSpeed(s)} className={`px-3 py-1.5 ${speed === s ? 'bg-orange-500 text-white' : 'bg-white text-slate-600'}`}>×{s}</button>
               ))}
             </div>
-            <span className="text-[11px] text-slate-400 ml-auto flex items-center gap-3">
+            <span className="text-[11px] text-slate-400 w-full sm:w-auto sm:ml-auto flex items-center gap-3">
               <span><span className="inline-block w-2 h-2 rounded-full bg-orange-500 mr-1" />en match</span>
               <span><span className="inline-block w-2 h-2 rounded-full bg-slate-300 mr-1" />caminando</span>
             </span>
@@ -76,7 +76,7 @@ export default function Simulacion() {
             ))}
             <rect x="-100" y="-100" width="200" height="200" fill="none" stroke="#e2e8f0" rx="4" />
             <circle r="50" fill="none" stroke="#fdba74" strokeDasharray="2 2" strokeWidth="0.6" />
-            <text y="-52" textAnchor="middle" fontSize="4" className="fill-orange-400 font-mono">radio de 50 m de quien mira</text>
+            <text x="-97" y="96" fontSize="4" className="fill-orange-400 font-mono">- - - radio de 50 m de quien mira</text>
             {pairs.map((p) => {
               const a = pos[p.a.id]; const b = pos[p.b.id]
               return <line key={p.key} x1={a.dx} y1={-a.dy} x2={b.dx} y2={-b.dy} stroke="#f97316" strokeWidth="0.8" strokeOpacity="0.7" />
@@ -127,7 +127,7 @@ export default function Simulacion() {
                   <span>{e.a.emoji}</span><span className="font-medium">{e.a.name}</span>
                   <i className="fa-solid fa-bolt text-orange-500 text-[10px]" />
                   <span>{e.b.emoji}</span><span className="font-medium">{e.b.name}</span>
-                  <span className="text-slate-400 truncate ml-auto">{e.shared[0]} · {Math.round(e.distance)} m</span>
+                  <span className="text-slate-400 truncate min-w-0 ml-auto">{e.shared[0]} · {Math.round(e.distance)} m</span>
                 </li>
               ))}
             </ul>

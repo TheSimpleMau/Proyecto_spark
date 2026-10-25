@@ -35,11 +35,18 @@ export function simulateWindow(tStart, tEnd, step = 5, bucketSeconds = 600) {
   const seen = new Set()
   const byInterest = {}
   const bySponsor = {}
-  const buckets = []
+  const pairsSum = [] // suma de parejas en match por bloque (para el promedio)
+  const samples = []
   let matches = 0
   let distSum = 0
-  for (let t = tStart; t <= tEnd; t += step) {
-    for (const p of closePairs(t)) {
+  // Las parejas que ya estaban juntas al inicio hicieron match antes de la ventana: no cuentan.
+  for (const p of closePairs(tStart)) seen.add(p.key)
+  for (let t = tStart + step; t <= tEnd; t += step) {
+    const close = closePairs(t)
+    const bi = Math.min(Math.floor((t - tStart) / bucketSeconds), Math.ceil((tEnd - tStart) / bucketSeconds) - 1)
+    pairsSum[bi] = (pairsSum[bi] ?? 0) + close.length
+    samples[bi] = (samples[bi] ?? 0) + 1
+    for (const p of close) {
       if (seen.has(p.key)) continue
       seen.add(p.key)
       matches++
@@ -47,8 +54,6 @@ export function simulateWindow(tStart, tEnd, step = 5, bucketSeconds = 600) {
       for (const tag of p.shared) byInterest[tag] = (byInterest[tag] ?? 0) + 1
       const s = sponsorFor(p.shared)
       if (s) bySponsor[s.brand] = (bySponsor[s.brand] ?? 0) + 1
-      const bi = Math.floor((t - tStart) / bucketSeconds)
-      buckets[bi] = (buckets[bi] ?? 0) + 1
     }
   }
   const nBuckets = Math.ceil((tEnd - tStart) / bucketSeconds)
@@ -57,7 +62,7 @@ export function simulateWindow(tStart, tEnd, step = 5, bucketSeconds = 600) {
     avgDistance: matches ? distSum / matches : 0,
     byInterest: Object.entries(byInterest).sort((a, b) => b[1] - a[1]),
     bySponsor: Object.entries(bySponsor).sort((a, b) => b[1] - a[1]),
-    buckets: Array.from({ length: nBuckets }, (_, i) => buckets[i] ?? 0),
+    pairsOverTime: Array.from({ length: nBuckets }, (_, i) => Math.round((pairsSum[i] ?? 0) / (samples[i] || 1))),
     pairsPossible: BOT_PAIRS.length,
   }
 }

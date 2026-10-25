@@ -1,4 +1,5 @@
 import { createContext, useCallback, useContext, useEffect, useRef, useState } from 'react'
+import { useLocation } from 'react-router'
 import { sponsorFor } from '../data/sponsors.js'
 import { useBotBrain } from '../hooks/useBotBrain.js'
 import { useGeolocation } from '../hooks/useGeolocation.js'
@@ -79,8 +80,11 @@ export function SparkProvider({ children }) {
   // Notificación de match (modal) ---------------------------------------------------
   const [activeId, setActiveId] = useState(null)
   const dismissed = useRef(new Set())
+  // El modal aparece solo en las pantallas de la app y nunca dentro de un chat abierto, para no interrumpir.
+  const { pathname } = useLocation()
+  const canPopUp = !pathname.startsWith('/chats/') && !['/simulacion', '/metricas'].includes(pathname)
   useEffect(() => {
-    if (activeId || !meId) return
+    if (activeId || !meId || !canPopUp) return
     const next = m.matches.find((x) =>
       matchView(x, meId).status === 'pending' && !dismissed.current.has(x.id)
       && new Date(x.created_at).getTime() > startedAt - 600000)
@@ -90,7 +94,7 @@ export function SparkProvider({ children }) {
     if (document.hidden && 'Notification' in window && Notification.permission === 'granted') {
       new Notification('⚡ ¡Coincidencia cercana!', { body: `Alguien comparte: ${next.shared.join(', ')}` })
     }
-  }, [m.matches, activeId, meId])
+  }, [m.matches, activeId, meId, canPopUp])
 
   const openMatch = useCallback((id) => setActiveId(id), [])
   const closeMatch = useCallback(() => {

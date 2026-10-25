@@ -68,9 +68,7 @@ export default function Metricas() {
               <div className="grid gap-3 lg:grid-cols-2">
                 <Card title="Intereses con más matches"><Bars data={real.by_interest.map((r) => [r.tag, r.n])} /></Card>
                 <Card title="Matches por hora (últimas 24 h)">
-                  {real.by_hour.length
-                    ? <Columns data={real.by_hour.map((r) => ({ label: hhmm(new Date(r.hour)), value: r.n }))} unit=" matches" />
-                    : <p className="text-xs text-slate-400 italic">Sin matches en las últimas 24 h</p>}
+                  <Columns data={last24Hours(real.by_hour)} unit=" matches" axis={['hace 23 h', 'esta hora']} />
                 </Card>
               </div>
             </>
@@ -88,8 +86,8 @@ export default function Metricas() {
             </div>
             <div className="grid gap-3 lg:grid-cols-3">
               <Card title="Intereses que más conectan"><Bars data={sim.byInterest.slice(0, 10)} /></Card>
-              <Card title="Matches cada 5 min">
-                <Columns data={sim.buckets.map((v, i) => ({ label: hhmm(new Date((sim.end - WINDOW_S + i * BUCKET_S) * 1000)), value: v }))} unit=" matches" />
+              <Card title="Parejas en match (promedio cada 5 min)">
+                <Columns data={sim.pairsOverTime.map((v, i) => ({ label: hhmm(new Date((sim.end - WINDOW_S + i * BUCKET_S) * 1000)), value: v }))} unit=" parejas" />
               </Card>
               <Card title="Activaciones por anunciante"><Bars data={sim.bySponsor} empty="Ningún match con anunciante" /></Card>
             </div>
@@ -98,6 +96,17 @@ export default function Metricas() {
       </main>
     </div>
   )
+}
+
+// Las 24 horas completas (con ceros), para que la gráfica se lea como línea de tiempo.
+function last24Hours(rows) {
+  const counts = new Map(rows.map((r) => [new Date(r.hour).getTime(), r.n]))
+  const start = new Date()
+  start.setMinutes(0, 0, 0)
+  return Array.from({ length: 24 }, (_, i) => {
+    const h = new Date(start.getTime() - (23 - i) * 3600000)
+    return { label: hhmm(h), value: counts.get(h.getTime()) ?? 0 }
+  })
 }
 
 function Card({ title, children }) {

@@ -32,7 +32,11 @@ export function useMatches(meId) {
   useEffect(() => {
     if (!supabase || !meId) return
     let alive = true
-    ;(async () => {
+    async function loadMatches() {
+      const { data } = await supabase.from('matches').select('*').order('created_at', { ascending: false })
+      if (alive && data) data.forEach(mergeMatch)
+    }
+    async function loadAll() {
       const [{ data: ms }, { data: msgs }] = await Promise.all([
         supabase.from('matches').select('*').order('created_at', { ascending: false }),
         supabase.from('messages').select('*').order('created_at').limit(2000),
@@ -43,13 +47,24 @@ export function useMatches(meId) {
       for (const m of msgs ?? []) (grouped[m.match_id] ??= []).push(m)
       setMessages(grouped)
       setLoaded(true)
-    })()
+    }
+    loadAll()
 
     const channel = supabase.channel(`spark-${meId}`)
       .on('postgres_changes', { event: '*', schema: 'public', table: 'matches' }, (p) => p.new?.id && mergeMatch(p.new))
       .on('postgres_changes', { event: 'INSERT', schema: 'public', table: 'messages' }, (p) => mergeMessage(p.new))
       .subscribe()
-    return () => { alive = false; supabase.removeChannel(channel) }
+
+    // Red de seguridad: el tiempo real se corta al bloquear el celular o tarda en conectarse.
+    const poll = setInterval(loadMatches, 8000)
+    const onVisible = () => document.visibilityState === 'visible' && loadAll()
+    document.addEventListener('visibilitychange', onVisible)
+    return () => {
+      alive = false
+      clearInterval(poll)
+      document.removeEventListener('visibilitychange', onVisible)
+      supabase.removeChannel(channel)
+    }
   }, [meId, mergeMatch, mergeMessage])
 
   // Trae los perfiles de usuarios reales que aparecen en mis matches.
