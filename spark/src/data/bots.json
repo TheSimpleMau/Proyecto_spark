@@ -1,0 +1,1121 @@
+[
+ {
+  "id": "00000000-0000-4000-8000-000000000001",
+  "name": "Ana",
+  "age": 25,
+  "emoji": "🐳",
+  "interests": [
+   "Teclados Mecánicos",
+   "Novela Gráfica",
+   "Running"
+  ],
+  "move": {
+   "cx": -16.974,
+   "cy": 44.084,
+   "rx": 12.456,
+   "ry": 6.939,
+   "wx": 0.045,
+   "wy": 0.021,
+   "px": 2.443,
+   "py": 0.719
+  }
+ },
+ {
+  "id": "00000000-0000-4000-8000-000000000002",
+  "name": "Diego",
+  "age": 22,
+  "emoji": "⚡",
+  "interests": [
+   "Helados y Malteadas",
+   "Teclados Mecánicos",
+   "Fotografía Analógica",
+   "Escalada",
+   "Moda Vintage"
+  ],
+  "move": {
+   "cx": -14.46,
+   "cy": 25.893,
+   "rx": 26.728,
+   "ry": 22.833,
+   "wx": 0.031,
+   "wy": 0.031,
+   "px": 2.601,
+   "py": 1.801
+  }
+ },
+ {
+  "id": "00000000-0000-4000-8000-000000000003",
+  "name": "Valeria",
+  "age": 21,
+  "emoji": "⚡",
+  "interests": [
+   "Postres",
+   "Programación",
+   "Escalada"
+  ],
+  "move": {
+   "cx": 31.296,
+   "cy": -47.677,
+   "rx": 22.323,
+   "ry": 14.688,
+   "wx": 0.015,
+   "wy": 0.019,
+   "px": 3.953,
+   "py": 2.294
+  }
+ },
+ {
+  "id": "00000000-0000-4000-8000-000000000004",
+  "name": "Santiago",
+  "age": 20,
+  "emoji": "🎧",
+  "interests": [
+   "Impresión 3D",
+   "Guitarra",
+   "Repostería",
+   "Perros",
+   "Anime",
+   "Ciclismo Urbano"
+  ],
+  "move": {
+   "cx": 12.34,
+   "cy": -0.547,
+   "rx": 22.89,
+   "ry": 19.184,
+   "wx": 0.024,
+   "wy": 0.023,
+   "px": 4.959,
+   "py": 4.824
+  }
+ },
+ {
+  "id": "00000000-0000-4000-8000-000000000005",
+  "name": "Camila",
+  "age": 29,
+  "emoji": "🦁",
+  "interests": [
+   "Repostería",
+   "Café de Especialidad",
+   "Moda Vintage"
+  ],
+  "move": {
+   "cx": -24.642,
+   "cy": -47.076,
+   "rx": 26.392,
+   "ry": 9.82,
+   "wx": 0.037,
+   "wy": 0.024,
+   "px": 3.699,
+   "py": 1.811
+  }
+ },
+ {
+  "id": "00000000-0000-4000-8000-000000000006",
+  "name": "Mateo",
+  "age": 18,
+  "emoji": "🎧",
+  "interests": [
+   "Plantas",
+   "Teclados Mecánicos",
+   "Videojuegos Retro",
+   "Juegos de Mesa",
+   "Helados y Malteadas"
+  ],
+  "move": {
+   "cx": 54.904,
+   "cy": -40.387,
+   "rx": 26.043,
+   "ry": 25.045,
+   "wx": 0.015,
+   "wy": 0.018,
+   "px": 0.161,
+   "py": 5.989
+  }
+ },
+ {
+  "id": "00000000-0000-4000-8000-000000000007",
+  "name": "Ximena",
+  "age": 23,
+  "emoji": "🦊",
+  "interests": [
+   "Running",
+   "Sneakers de Colección",
+   "Guitarra"
+  ],
+  "move": {
+   "cx": -66.932,
+   "cy": 10.296,
+   "rx": 10.238,
+   "ry": 8.142,
+   "wx": 0.023,
+   "wy": 0.015,
+   "px": 5.291,
+   "py": 1.411
+  }
+ },
+ {
+  "id": "00000000-0000-4000-8000-000000000008",
+  "name": "Emiliano",
+  "age": 28,
+  "emoji": "🦉",
+  "interests": [
+   "Sneakers de Colección",
+   "Postres",
+   "Juegos de Mesa",
+   "Tacos al Pastor",
+   "Ajedrez"
+  ],
+  "move": {
+   "cx": -9.615,
+   "cy": -38.523,
+   "rx": 19.312,
+   "ry": 10.475,
+   "wx": 0.033,
+   "wy": 0.029,
+   "px": 1.024,
+   "py": 5.66
+  }
+ },
+ {
+  "id": "00000000-0000-4000-8000-000000000009",
+  "name": "Renata",
+  "age": 22,
+  "emoji": "🦁",
+  "interests": [
+   "Running",
+   "Anime",
+   "Ciencia Ficción",
+   "Fotografía Analógica",
+   "Diseño Industrial",
+   "Jazz"
+  ],
+  "move": {
+   "cx": 39.513,
+   "cy": 15.178,
+   "rx": 11.028,
+   "ry": 7.213,
+   "wx": 0.042,
+   "wy": 0.015,
+   "px": 0.87,
+   "py": 5.121
+  }
+ },
+ {
+  "id": "00000000-0000-4000-8000-000000000010",
+  "name": "Leonardo",
+  "age": 20,
+  "emoji": "🦉",
+  "interests": [
+   "Plantas",
+   "Café de Especialidad",
+   "Herramientas EDC",
+   "Postres"
+  ],
+  "move": {
+   "cx": 53.819,
+   "cy": 43.894,
+   "rx": 18.99,
+   "ry": 18.722,
+   "wx": 0.015,
+   "wy": 0.027,
+   "px": 3.229,
+   "py": 3.65
+  }
+ },
+ {
+  "id": "00000000-0000-4000-8000-000000000011",
+  "name": "Regina",
+  "age": 24,
+  "emoji": "🐨",
+  "interests": [
+   "Ciencia Ficción",
+   "Tacos al Pastor",
+   "Programación",
+   "Jazz",
+   "Vinilos"
+  ],
+  "move": {
+   "cx": 40.56,
+   "cy": -40.365,
+   "rx": 8.721,
+   "ry": 9.709,
+   "wx": 0.028,
+   "wy": 0.045,
+   "px": 2.817,
+   "py": 2.892
+  }
+ },
+ {
+  "id": "00000000-0000-4000-8000-000000000012",
+  "name": "Sebastián",
+  "age": 21,
+  "emoji": "🦜",
+  "interests": [
+   "Fotografía Analógica",
+   "Ramen",
+   "Teclados Mecánicos",
+   "Plantas",
+   "Moda Vintage"
+  ],
+  "move": {
+   "cx": 5.684,
+   "cy": 28.382,
+   "rx": 25.499,
+   "ry": 21.604,
+   "wx": 0.037,
+   "wy": 0.03,
+   "px": 2.479,
+   "py": 6.227
+  }
+ },
+ {
+  "id": "00000000-0000-4000-8000-000000000013",
+  "name": "Mariana",
+  "age": 29,
+  "emoji": "🐸",
+  "interests": [
+   "Guitarra",
+   "Escalada",
+   "Ciencia Ficción",
+   "Repostería"
+  ],
+  "move": {
+   "cx": -19.174,
+   "cy": 48.792,
+   "rx": 27.418,
+   "ry": 9.282,
+   "wx": 0.042,
+   "wy": 0.028,
+   "px": 0.689,
+   "py": 0.817
+  }
+ },
+ {
+  "id": "00000000-0000-4000-8000-000000000014",
+  "name": "Iker",
+  "age": 18,
+  "emoji": "🦜",
+  "interests": [
+   "Postres",
+   "Anime",
+   "Café de Especialidad",
+   "Sintetizadores"
+  ],
+  "move": {
+   "cx": -2.837,
+   "cy": 7.403,
+   "rx": 7.79,
+   "ry": 14.989,
+   "wx": 0.028,
+   "wy": 0.023,
+   "px": 3.437,
+   "py": 3.476
+  }
+ },
+ {
+  "id": "00000000-0000-4000-8000-000000000015",
+  "name": "Sofía",
+  "age": 23,
+  "emoji": "🐙",
+  "interests": [
+   "Escalada",
+   "Running",
+   "Anime",
+   "Herramientas EDC",
+   "Novela Gráfica"
+  ],
+  "move": {
+   "cx": -50.855,
+   "cy": 39.983,
+   "rx": 22.195,
+   "ry": 8.825,
+   "wx": 0.019,
+   "wy": 0.019,
+   "px": 3.166,
+   "py": 0.784
+  }
+ },
+ {
+  "id": "00000000-0000-4000-8000-000000000016",
+  "name": "Andrés",
+  "age": 24,
+  "emoji": "🦄",
+  "interests": [
+   "Novela Gráfica",
+   "Moda Vintage",
+   "Programación",
+   "Sintetizadores",
+   "Ciencia Ficción"
+  ],
+  "move": {
+   "cx": -69.421,
+   "cy": -2.98,
+   "rx": 25.432,
+   "ry": 6.326,
+   "wx": 0.015,
+   "wy": 0.022,
+   "px": 1.068,
+   "py": 1.965
+  }
+ },
+ {
+  "id": "00000000-0000-4000-8000-000000000017",
+  "name": "Daniela",
+  "age": 28,
+  "emoji": "🍄",
+  "interests": [
+   "Sneakers de Colección",
+   "Impresión 3D",
+   "Programación",
+   "Novela Gráfica",
+   "Ramen",
+   "Sintetizadores"
+  ],
+  "move": {
+   "cx": -59.014,
+   "cy": -32.986,
+   "rx": 20.751,
+   "ry": 15.314,
+   "wx": 0.017,
+   "wy": 0.029,
+   "px": 1.143,
+   "py": 4.28
+  }
+ },
+ {
+  "id": "00000000-0000-4000-8000-000000000018",
+  "name": "Rodrigo",
+  "age": 20,
+  "emoji": "🦄",
+  "interests": [
+   "Guitarra",
+   "Tacos al Pastor",
+   "Running"
+  ],
+  "move": {
+   "cx": 8.876,
+   "cy": -64.43,
+   "rx": 17.869,
+   "ry": 19.894,
+   "wx": 0.023,
+   "wy": 0.015,
+   "px": 2.222,
+   "py": 2.624
+  }
+ },
+ {
+  "id": "00000000-0000-4000-8000-000000000019",
+  "name": "Fernanda",
+  "age": 28,
+  "emoji": "🦄",
+  "interests": [
+   "Perros",
+   "Sneakers de Colección",
+   "Helados y Malteadas",
+   "Repostería",
+   "Juegos de Mesa",
+   "Teclados Mecánicos"
+  ],
+  "move": {
+   "cx": 63.203,
+   "cy": -27.123,
+   "rx": 8.429,
+   "ry": 15.584,
+   "wx": 0.04,
+   "wy": 0.022,
+   "px": 0.692,
+   "py": 5.238
+  }
+ },
+ {
+  "id": "00000000-0000-4000-8000-000000000020",
+  "name": "Pablo",
+  "age": 25,
+  "emoji": "🦉",
+  "interests": [
+   "Videojuegos Retro",
+   "Música Indie",
+   "Plantas"
+  ],
+  "move": {
+   "cx": -39.287,
+   "cy": 35.297,
+   "rx": 24.006,
+   "ry": 14.45,
+   "wx": 0.026,
+   "wy": 0.016,
+   "px": 1.762,
+   "py": 2.352
+  }
+ },
+ {
+  "id": "00000000-0000-4000-8000-000000000021",
+  "name": "Natalia",
+  "age": 20,
+  "emoji": "🐳",
+  "interests": [
+   "Café de Especialidad",
+   "Ramen",
+   "Videojuegos Retro",
+   "Guitarra"
+  ],
+  "move": {
+   "cx": -43.185,
+   "cy": 2.726,
+   "rx": 12.227,
+   "ry": 11.685,
+   "wx": 0.015,
+   "wy": 0.02,
+   "px": 4.905,
+   "py": 0.287
+  }
+ },
+ {
+  "id": "00000000-0000-4000-8000-000000000022",
+  "name": "Emilio",
+  "age": 20,
+  "emoji": "🐙",
+  "interests": [
+   "Plantas",
+   "Cine de Autor",
+   "Jazz",
+   "Café de Especialidad"
+  ],
+  "move": {
+   "cx": -32.332,
+   "cy": -44.904,
+   "rx": 23.513,
+   "ry": 22.499,
+   "wx": 0.016,
+   "wy": 0.019,
+   "px": 5.258,
+   "py": 4.695
+  }
+ },
+ {
+  "id": "00000000-0000-4000-8000-000000000023",
+  "name": "Andrea",
+  "age": 20,
+  "emoji": "🦉",
+  "interests": [
+   "Sneakers de Colección",
+   "Impresión 3D",
+   "Videojuegos Retro",
+   "Música Indie",
+   "Vinilos"
+  ],
+  "move": {
+   "cx": 7.93,
+   "cy": 26.837,
+   "rx": 7.192,
+   "ry": 25.417,
+   "wx": 0.027,
+   "wy": 0.026,
+   "px": 2.694,
+   "py": 2.407
+  }
+ },
+ {
+  "id": "00000000-0000-4000-8000-000000000024",
+  "name": "Joaquín",
+  "age": 22,
+  "emoji": "🐳",
+  "interests": [
+   "Vinilos",
+   "Ciclismo Urbano",
+   "Moda Vintage"
+  ],
+  "move": {
+   "cx": -33.24,
+   "cy": -8.793,
+   "rx": 15.287,
+   "ry": 10.013,
+   "wx": 0.015,
+   "wy": 0.016,
+   "px": 2.135,
+   "py": 3.942
+  }
+ },
+ {
+  "id": "00000000-0000-4000-8000-000000000025",
+  "name": "Paula",
+  "age": 23,
+  "emoji": "🐯",
+  "interests": [
+   "Ciencia Ficción",
+   "Fotografía Analógica",
+   "Perros",
+   "Programación",
+   "Herramientas EDC",
+   "Impresión 3D"
+  ],
+  "move": {
+   "cx": 48.55,
+   "cy": 5.417,
+   "rx": 9.258,
+   "ry": 18.718,
+   "wx": 0.024,
+   "wy": 0.017,
+   "px": 4.724,
+   "py": 4.427
+  }
+ },
+ {
+  "id": "00000000-0000-4000-8000-000000000026",
+  "name": "Gael",
+  "age": 22,
+  "emoji": "🐨",
+  "interests": [
+   "Guitarra",
+   "Poesía",
+   "Café de Especialidad",
+   "Música Indie"
+  ],
+  "move": {
+   "cx": 36.757,
+   "cy": 12.714,
+   "rx": 11.577,
+   "ry": 24.763,
+   "wx": 0.031,
+   "wy": 0.027,
+   "px": 0.272,
+   "py": 0.504
+  }
+ },
+ {
+  "id": "00000000-0000-4000-8000-000000000027",
+  "name": "Lucía",
+  "age": 26,
+  "emoji": "🍄",
+  "interests": [
+   "Moda Vintage",
+   "Sneakers de Colección",
+   "Postres"
+  ],
+  "move": {
+   "cx": 27.251,
+   "cy": 18.161,
+   "rx": 14.57,
+   "ry": 7.247,
+   "wx": 0.037,
+   "wy": 0.018,
+   "px": 4.497,
+   "py": 4.671
+  }
+ },
+ {
+  "id": "00000000-0000-4000-8000-000000000028",
+  "name": "Bruno",
+  "age": 21,
+  "emoji": "🦊",
+  "interests": [
+   "Poesía",
+   "Moda Vintage",
+   "Juegos de Mesa",
+   "Vinilos"
+  ],
+  "move": {
+   "cx": 20.682,
+   "cy": -0.135,
+   "rx": 24.723,
+   "ry": 15.181,
+   "wx": 0.018,
+   "wy": 0.026,
+   "px": 5.61,
+   "py": 3.612
+  }
+ },
+ {
+  "id": "00000000-0000-4000-8000-000000000029",
+  "name": "Victoria",
+  "age": 25,
+  "emoji": "🍄",
+  "interests": [
+   "Guitarra",
+   "Plantas",
+   "Programación",
+   "Café de Especialidad"
+  ],
+  "move": {
+   "cx": 37.217,
+   "cy": 21.612,
+   "rx": 24.509,
+   "ry": 14.371,
+   "wx": 0.039,
+   "wy": 0.05,
+   "px": 2.574,
+   "py": 0.06
+  }
+ },
+ {
+  "id": "00000000-0000-4000-8000-000000000030",
+  "name": "Tomás",
+  "age": 28,
+  "emoji": "🌻",
+  "interests": [
+   "Ciencia Ficción",
+   "Herramientas EDC",
+   "Sintetizadores",
+   "Poesía",
+   "Videojuegos Retro",
+   "Running"
+  ],
+  "move": {
+   "cx": 13.401,
+   "cy": 57.605,
+   "rx": 13.23,
+   "ry": 26.7,
+   "wx": 0.015,
+   "wy": 0.034,
+   "px": 2.421,
+   "py": 1.924
+  }
+ },
+ {
+  "id": "00000000-0000-4000-8000-000000000031",
+  "name": "Itzel",
+  "age": 21,
+  "emoji": "🐧",
+  "interests": [
+   "Sneakers de Colección",
+   "Running",
+   "Impresión 3D"
+  ],
+  "move": {
+   "cx": 64.037,
+   "cy": -19.617,
+   "rx": 12.072,
+   "ry": 10.111,
+   "wx": 0.023,
+   "wy": 0.024,
+   "px": 2.21,
+   "py": 2.536
+  }
+ },
+ {
+  "id": "00000000-0000-4000-8000-000000000032",
+  "name": "Héctor",
+  "age": 27,
+  "emoji": "🦄",
+  "interests": [
+   "Programación",
+   "Repostería",
+   "Ajedrez",
+   "Poesía"
+  ],
+  "move": {
+   "cx": 2.194,
+   "cy": 45.559,
+   "rx": 19.028,
+   "ry": 26.466,
+   "wx": 0.016,
+   "wy": 0.022,
+   "px": 0.943,
+   "py": 3.552
+  }
+ },
+ {
+  "id": "00000000-0000-4000-8000-000000000033",
+  "name": "Alejandra",
+  "age": 29,
+  "emoji": "🐼",
+  "interests": [
+   "Diseño Industrial",
+   "Plantas",
+   "Ramen",
+   "Café de Especialidad"
+  ],
+  "move": {
+   "cx": 28.627,
+   "cy": 15.276,
+   "rx": 25.583,
+   "ry": 22.249,
+   "wx": 0.026,
+   "wy": 0.025,
+   "px": 5.101,
+   "py": 4.071
+  }
+ },
+ {
+  "id": "00000000-0000-4000-8000-000000000034",
+  "name": "Luis",
+  "age": 26,
+  "emoji": "🐨",
+  "interests": [
+   "Guitarra",
+   "Novela Gráfica",
+   "Vinilos",
+   "Ajedrez",
+   "Programación"
+  ],
+  "move": {
+   "cx": 0.393,
+   "cy": -48.441,
+   "rx": 22.401,
+   "ry": 26.911,
+   "wx": 0.018,
+   "wy": 0.025,
+   "px": 4.596,
+   "py": 4.466
+  }
+ },
+ {
+  "id": "00000000-0000-4000-8000-000000000035",
+  "name": "Montserrat",
+  "age": 25,
+  "emoji": "🐢",
+  "interests": [
+   "Sneakers de Colección",
+   "Programación",
+   "Cine de Autor",
+   "Postres",
+   "Vinilos"
+  ],
+  "move": {
+   "cx": 58.075,
+   "cy": 4.613,
+   "rx": 12.994,
+   "ry": 7.435,
+   "wx": 0.031,
+   "wy": 0.017,
+   "px": 3.714,
+   "py": 4.339
+  }
+ },
+ {
+  "id": "00000000-0000-4000-8000-000000000036",
+  "name": "Iván",
+  "age": 29,
+  "emoji": "🦋",
+  "interests": [
+   "Guitarra",
+   "Moda Vintage",
+   "Ciencia Ficción",
+   "Programación"
+  ],
+  "move": {
+   "cx": 28.104,
+   "cy": -35.521,
+   "rx": 7.64,
+   "ry": 12.209,
+   "wx": 0.023,
+   "wy": 0.019,
+   "px": 5.237,
+   "py": 5.625
+  }
+ },
+ {
+  "id": "00000000-0000-4000-8000-000000000037",
+  "name": "Carolina",
+  "age": 20,
+  "emoji": "⚡",
+  "interests": [
+   "Moda Vintage",
+   "Diseño Industrial",
+   "Fotografía Analógica",
+   "Herramientas EDC"
+  ],
+  "move": {
+   "cx": -11.833,
+   "cy": -67.309,
+   "rx": 26.018,
+   "ry": 17.877,
+   "wx": 0.016,
+   "wy": 0.023,
+   "px": 2.399,
+   "py": 0.987
+  }
+ },
+ {
+  "id": "00000000-0000-4000-8000-000000000038",
+  "name": "Óscar",
+  "age": 21,
+  "emoji": "🎧",
+  "interests": [
+   "Tacos al Pastor",
+   "Moda Vintage",
+   "Cine de Autor",
+   "Programación",
+   "Repostería",
+   "Escalada"
+  ],
+  "move": {
+   "cx": -17.529,
+   "cy": -11.114,
+   "rx": 26.938,
+   "ry": 10.96,
+   "wx": 0.047,
+   "wy": 0.026,
+   "px": 2.085,
+   "py": 2.604
+  }
+ },
+ {
+  "id": "00000000-0000-4000-8000-000000000039",
+  "name": "Frida",
+  "age": 21,
+  "emoji": "🐯",
+  "interests": [
+   "Ciclismo Urbano",
+   "Moda Vintage",
+   "Ajedrez"
+  ],
+  "move": {
+   "cx": 5.725,
+   "cy": 24.64,
+   "rx": 14.5,
+   "ry": 21.6,
+   "wx": 0.018,
+   "wy": 0.015,
+   "px": 1.248,
+   "py": 1.428
+  }
+ },
+ {
+  "id": "00000000-0000-4000-8000-000000000040",
+  "name": "Rafael",
+  "age": 20,
+  "emoji": "🦁",
+  "interests": [
+   "Teclados Mecánicos",
+   "Anime",
+   "Ciencia Ficción",
+   "Herramientas EDC"
+  ],
+  "move": {
+   "cx": -46.753,
+   "cy": -48.815,
+   "rx": 12.315,
+   "ry": 19.698,
+   "wx": 0.044,
+   "wy": 0.015,
+   "px": 4.54,
+   "py": 1.704
+  }
+ },
+ {
+  "id": "00000000-0000-4000-8000-000000000041",
+  "name": "Abril",
+  "age": 22,
+  "emoji": "🦜",
+  "interests": [
+   "Café de Especialidad",
+   "Repostería",
+   "Sneakers de Colección"
+  ],
+  "move": {
+   "cx": 6.271,
+   "cy": 33.563,
+   "rx": 8.986,
+   "ry": 7.619,
+   "wx": 0.02,
+   "wy": 0.045,
+   "px": 6.205,
+   "py": 2.984
+  }
+ },
+ {
+  "id": "00000000-0000-4000-8000-000000000042",
+  "name": "Marco",
+  "age": 27,
+  "emoji": "🎧",
+  "interests": [
+   "Programación",
+   "Anime",
+   "Teclados Mecánicos",
+   "Postres",
+   "Sintetizadores"
+  ],
+  "move": {
+   "cx": -55.005,
+   "cy": 26.093,
+   "rx": 21.164,
+   "ry": 20.272,
+   "wx": 0.015,
+   "wy": 0.021,
+   "px": 3.737,
+   "py": 4.298
+  }
+ },
+ {
+  "id": "00000000-0000-4000-8000-000000000043",
+  "name": "Jimena",
+  "age": 27,
+  "emoji": "🦄",
+  "interests": [
+   "Anime",
+   "Vinilos",
+   "Ajedrez",
+   "Perros",
+   "Helados y Malteadas",
+   "Tacos al Pastor"
+  ],
+  "move": {
+   "cx": -29.505,
+   "cy": 41.482,
+   "rx": 15.664,
+   "ry": 25.359,
+   "wx": 0.034,
+   "wy": 0.02,
+   "px": 5.088,
+   "py": 5.953
+  }
+ },
+ {
+  "id": "00000000-0000-4000-8000-000000000044",
+  "name": "Arturo",
+  "age": 22,
+  "emoji": "🐧",
+  "interests": [
+   "Ciencia Ficción",
+   "Impresión 3D",
+   "Moda Vintage",
+   "Running",
+   "Diseño Industrial",
+   "Cine de Autor"
+  ],
+  "move": {
+   "cx": -35.586,
+   "cy": -2.784,
+   "rx": 8.506,
+   "ry": 14.786,
+   "wx": 0.018,
+   "wy": 0.03,
+   "px": 5.856,
+   "py": 0.581
+  }
+ },
+ {
+  "id": "00000000-0000-4000-8000-000000000045",
+  "name": "Paola",
+  "age": 20,
+  "emoji": "🌵",
+  "interests": [
+   "Helados y Malteadas",
+   "Café de Especialidad",
+   "Teclados Mecánicos"
+  ],
+  "move": {
+   "cx": 20.796,
+   "cy": -36.841,
+   "rx": 18.104,
+   "ry": 17.15,
+   "wx": 0.046,
+   "wy": 0.026,
+   "px": 1.868,
+   "py": 2.432
+  }
+ },
+ {
+  "id": "00000000-0000-4000-8000-000000000046",
+  "name": "Gerardo",
+  "age": 25,
+  "emoji": "🦉",
+  "interests": [
+   "Escalada",
+   "Diseño Industrial",
+   "Novela Gráfica",
+   "Helados y Malteadas",
+   "Repostería"
+  ],
+  "move": {
+   "cx": -21.851,
+   "cy": 14.281,
+   "rx": 26.977,
+   "ry": 7.584,
+   "wx": 0.027,
+   "wy": 0.018,
+   "px": 2.077,
+   "py": 3.339
+  }
+ },
+ {
+  "id": "00000000-0000-4000-8000-000000000047",
+  "name": "Elena",
+  "age": 29,
+  "emoji": "🐢",
+  "interests": [
+   "Escalada",
+   "Cine de Autor",
+   "Vinilos",
+   "Teclados Mecánicos"
+  ],
+  "move": {
+   "cx": 60.544,
+   "cy": -22.401,
+   "rx": 19.004,
+   "ry": 10.865,
+   "wx": 0.046,
+   "wy": 0.015,
+   "px": 1.169,
+   "py": 2.495
+  }
+ },
+ {
+  "id": "00000000-0000-4000-8000-000000000048",
+  "name": "Julián",
+  "age": 29,
+  "emoji": "⚡",
+  "interests": [
+   "Helados y Malteadas",
+   "Impresión 3D",
+   "Sneakers de Colección",
+   "Jazz",
+   "Tacos al Pastor",
+   "Moda Vintage"
+  ],
+  "move": {
+   "cx": 19.672,
+   "cy": -46.816,
+   "rx": 6.5,
+   "ry": 16.409,
+   "wx": 0.031,
+   "wy": 0.019,
+   "px": 1.957,
+   "py": 4.006
+  }
+ },
+ {
+  "id": "00000000-0000-4000-8000-000000000049",
+  "name": "Daniel",
+  "age": 28,
+  "emoji": "🦄",
+  "interests": [
+   "Ciencia Ficción",
+   "Plantas",
+   "Postres",
+   "Tacos al Pastor"
+  ],
+  "move": {
+   "cx": -49.555,
+   "cy": -11.735,
+   "rx": 10.049,
+   "ry": 10.405,
+   "wx": 0.027,
+   "wy": 0.019,
+   "px": 6.248,
+   "py": 2.629
+  }
+ },
+ {
+  "id": "00000000-0000-4000-8000-000000000050",
+  "name": "Majo",
+  "age": 24,
+  "emoji": "🐳",
+  "interests": [
+   "Cine de Autor",
+   "Sneakers de Colección",
+   "Programación"
+  ],
+  "move": {
+   "cx": 11.264,
+   "cy": 51.409,
+   "rx": 9.251,
+   "ry": 23.192,
+   "wx": 0.016,
+   "wy": 0.019,
+   "px": 4.528,
+   "py": 4.579
+  }
+ }
+]
