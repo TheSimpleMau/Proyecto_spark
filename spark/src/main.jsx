@@ -2,6 +2,7 @@ import { StrictMode, useState } from 'react'
 import { createRoot } from 'react-dom/client'
 import { BrowserRouter, Route, Routes } from 'react-router'
 import BottomNav from './components/BottomNav.jsx'
+import Intro from './components/Intro.jsx'
 import MatchModal from './components/MatchModal.jsx'
 import PocketMode from './components/PocketMode.jsx'
 import PushBanner from './components/PushBanner.jsx'
@@ -15,10 +16,18 @@ import Perfil from './screens/Perfil.jsx'
 import Radar from './screens/Radar.jsx'
 import Simulacion from './screens/Simulacion.jsx'
 
+// La explicación inicial sale cada vez que se abre (o recarga) la app, pero no al volver de /simulacion.
+let introSeen = false
+
 // Marco tipo celular para las pantallas de la app (en computadora se ve centrado).
 function PhoneApp() {
   const { ready, me, geo } = useSpark()
   const [pocket, setPocket] = useState(false)
+  const [intro, setIntro] = useState(!introSeen)
+  if (intro) {
+    const start = () => { introSeen = true; setIntro(false) }
+    return <div className="h-dvh flex flex-col max-w-md mx-auto bg-white shadow-xl border-x border-slate-200"><Intro onStart={start} /></div>
+  }
   if (!ready) return <div className="min-h-dvh flex items-center justify-center text-orange-500"><i className="fa-solid fa-bolt fa-beat text-2xl" /></div>
   return (
     <div className="h-dvh flex flex-col max-w-md mx-auto bg-white shadow-xl border-x border-slate-200 overflow-hidden">
