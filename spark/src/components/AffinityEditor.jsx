@@ -21,7 +21,7 @@ export default function AffinityEditor({ interests, onChange }) {
       <div className="flex justify-between items-center">
         <div>
           <h2 className="text-xs font-bold uppercase tracking-wider text-slate-400 font-mono">Mis afinidades de nicho</h2>
-          <p className="text-xs text-slate-600">Intereses específicos para romper el hielo</p>
+          <p className="text-xs text-slate-600">Elige del catálogo o escribe el tuyo</p>
         </div>
         <span className="text-xs font-mono font-semibold px-2 py-0.5 rounded-full bg-orange-100 text-orange-700">{interests.length} / {MAX}</span>
       </div>
@@ -36,7 +36,7 @@ export default function AffinityEditor({ interests, onChange }) {
         ))}
       </div>
       <form onSubmit={add} className="flex gap-2">
-        <input value={value} onChange={(e) => setValue(e.target.value)} list="catalogo" placeholder="Ej: Teclados Mecánicos, Ramen…"
+        <input value={value} onChange={(e) => setValue(e.target.value)} list="catalogo" placeholder="Ej: Ramen o uno propio, como Cactus Raros" maxLength={30}
           className="flex-1 min-w-0 bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2.5 text-xs placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-orange-500/40 focus:bg-white" />
         <datalist id="catalogo">{TAGS.filter((t) => !interests.includes(t)).map((t) => <option key={t} value={t} />)}</datalist>
         <button disabled={interests.length >= MAX} className="px-4 py-2.5 bg-orange-500 hover:bg-orange-600 disabled:opacity-40 text-white rounded-xl text-xs font-semibold flex items-center gap-1">

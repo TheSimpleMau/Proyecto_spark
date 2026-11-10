@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router'
-import { CATEGORIES, INTERESTS } from '../data/interests.js'
+import { CATEGORIES, INTERESTS, findInterest } from '../data/interests.js'
 import { useSpark } from '../lib/spark.jsx'
 import { supabase } from '../lib/supabase.js'
 
@@ -14,12 +14,24 @@ export default function Onboarding() {
   const [name, setName] = useState('')
   const [emoji, setEmoji] = useState('⚡')
   const [picked, setPicked] = useState([])
+  const [custom, setCustom] = useState('')
   const [busy, setBusy] = useState(false)
   const [error, setError] = useState(null)
 
   if (!supabase) return <SetupMissing />
 
   const toggle = (tag) => setPicked((p) => (p.includes(tag) ? p.filter((t) => t !== tag) : p.length < MAX ? [...p, tag] : p))
+  const customs = picked.filter((t) => !findInterest(t))
+
+  // Interés escrito a mano: si coincide con uno del catálogo (sin importar acentos/mayúsculas) usa ese nombre.
+  function addCustom(e) {
+    e.preventDefault()
+    const raw = custom.trim()
+    if (!raw || picked.length >= MAX) return
+    const tag = findInterest(raw)?.tag ?? raw
+    if (!picked.includes(tag)) setPicked([...picked, tag])
+    setCustom('')
+  }
 
   async function finish(mode) {
     setBusy(true)
@@ -90,6 +102,28 @@ export default function Onboarding() {
               </div>
             </div>
           ))}
+          <div>
+            <p className="text-[11px] font-mono uppercase tracking-wider text-slate-400 mb-1.5">Tus intereses</p>
+            {customs.length > 0 && (
+              <div className="flex flex-wrap gap-2 mb-2">
+                {customs.map((tag) => (
+                  <span key={tag} className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-medium bg-orange-500 text-white">
+                    {tag}
+                    <button onClick={() => toggle(tag)} aria-label={`Quitar ${tag}`} className="text-white/80 hover:text-white">
+                      <i className="fa-solid fa-xmark text-xs" />
+                    </button>
+                  </span>
+                ))}
+              </div>
+            )}
+            <form onSubmit={addCustom} className="flex gap-2">
+              <input value={custom} onChange={(e) => setCustom(e.target.value)} maxLength={30} placeholder="¿No está el tuyo? Escríbelo"
+                className="flex-1 min-w-0 bg-white border border-slate-200 rounded-xl px-3.5 py-2.5 text-xs placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-orange-500/40" />
+              <button disabled={!custom.trim() || picked.length >= MAX} className="px-4 py-2.5 bg-orange-500 hover:bg-orange-600 disabled:opacity-40 text-white rounded-xl text-xs font-semibold flex items-center gap-1">
+                <i className="fa-solid fa-plus" /> Añadir
+              </button>
+            </form>
+          </div>
         </div>
       )}
 
